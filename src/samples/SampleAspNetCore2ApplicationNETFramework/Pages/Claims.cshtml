@@ -1,0 +1,13 @@
+﻿@page
+@model ClaimsModel
+@{
+    ViewData["Title"] = "Claims";
+}
+
+<h3>@Model.Message</h3>
+<p>Use this area to provide additional information.</p>
+
+@foreach (var claim in User?.Claims)
+{
+    <p><strong>@claim.Type :</strong> @claim.Value</p>
+}
