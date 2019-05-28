@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Claims Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Your claims</h1>
+        @foreach (var claim in User?.Claims)
+        {
+            <p><strong>@claim.Type :</strong> @claim.Value</p>
+        }
+    </div>
+
+

@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleAspNetCore2Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adfs.attributestore.tests", "src\tests\adfs.attributestore.tests\adfs.attributestore.tests.csproj", "{360C80E4-FE97-47E6-83A4-3B1DC1805D8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webclient", "src\samples\webclient\webclient.csproj", "{F0F458F5-8969-45E5-860D-9B506118A591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{360C80E4-FE97-47E6-83A4-3B1DC1805D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{360C80E4-FE97-47E6-83A4-3B1DC1805D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{360C80E4-FE97-47E6-83A4-3B1DC1805D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F458F5-8969-45E5-860D-9B506118A591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F458F5-8969-45E5-860D-9B506118A591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F458F5-8969-45E5-860D-9B506118A591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F458F5-8969-45E5-860D-9B506118A591}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{B48049CC-0F24-4AFF-8A10-22D907FBDA44} = {909B3503-C206-43E7-8B25-3C157361F63F}
 		{8B43AF61-5838-4646-A74A-26E8F7DCD861} = {909B3503-C206-43E7-8B25-3C157361F63F}
 		{360C80E4-FE97-47E6-83A4-3B1DC1805D8E} = {40BBD861-2CB3-46C8-999D-B26C2969E32A}
+		{F0F458F5-8969-45E5-860D-9B506118A591} = {909B3503-C206-43E7-8B25-3C157361F63F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9927AD71-9EDD-40DA-817C-C68488B2CE20}
