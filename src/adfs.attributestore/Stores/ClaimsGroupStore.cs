@@ -10,7 +10,7 @@
         public IAsyncResult BeginExecuteQuery(string query, string[] parameters, AsyncCallback callback, object state)
         {
             //c:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"]
-            //=> issue(store = "EAClaimsTransformer", types = ("groups"), query = "sn", param = c.Value);
+            //=> issue(store = "AddlevelStore", types = ("groups"), query = "email", param = c.Value);
 
             if (string.IsNullOrEmpty(query))
             {
@@ -27,7 +27,7 @@
                 throw new AttributeStoreQueryFormatException("More than one query parameter.");
             }
 
-            if (!query.Equals("sn"))
+            if (!query.Equals("email"))
             {
                 throw new AttributeStoreQueryFormatException("The query string is not supported.");
             }
