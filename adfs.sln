@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adfs.attributestore", "src\adfs.attributestore\adfs.attributestore.csproj", "{B3A43858-EC44-4ACD-B4AA-752A153F74E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{40BBD861-2CB3-46C8-999D-B26C2969E32A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{909B3503-C206-43E7-8B25-3C157361F63F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3A43858-EC44-4ACD-B4AA-752A153F74E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A43858-EC44-4ACD-B4AA-752A153F74E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A43858-EC44-4ACD-B4AA-752A153F74E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A43858-EC44-4ACD-B4AA-752A153F74E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9927AD71-9EDD-40DA-817C-C68488B2CE20}
+	EndGlobalSection
+EndGlobal
