@@ -1,10 +1,10 @@
 ﻿@{
     Environment = @{
         AdministratorPassword = 'Abc.123!'
-        RootCertificateName = 'AddlevelRoot'
-        SSLCertificateName = 'sts.addlevel.dev'
-        DomainName = 'addlevel.dev'
-        ISOImagePath = ''
+        RootCertificateName = 'AuthRoot'
+        SSLCertificateName = 'sts.auth.local'
+        DomainName = 'auth.local'
+        ISOImagePath = 'C:\vm\iso\server2019.iso'
     }
     Paths = @{
         ModulePath = Join-Path $EnvironmentPath 'modules'
