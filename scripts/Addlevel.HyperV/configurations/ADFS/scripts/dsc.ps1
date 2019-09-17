@@ -6,7 +6,7 @@
 
         [Parameter(Mandatory)]
         [String]$CertificateThumbprint,
-        
+
         [Parameter(Mandatory)]
         [System.Management.Automation.PSCredential]$DomainCredentials
     )
@@ -82,10 +82,10 @@
         {
   	        SetScript = {
                 Set-DnsServerDiagnostics -All $true
-                Write-Verbose -Verbose "Enabling DNS client diagnostics"
+                Write-Verbose -Message "Enabling DNS client diagnostics" -Verbose
             }
             GetScript =  { @{} }
-            TestScript = { 
+            TestScript = {
                 try {
                     Get-DnsServerDiagnostics -ErrorAction Stop
                     $false
@@ -104,7 +104,7 @@
                 $resourceRecord = Add-DnsServerResourceRecordA -ZoneName $zoneName -Name '@' -AllowUpdateAny -IPv4Address $using:ipAddress
             }
             GetScript =  { @{} }
-            TestScript = { 
+            TestScript = {
                 $zoneName = $using:subject
                 $dnsZone = Get-DnsServerZone -Name $zoneName -ErrorAction SilentlyContinue
                 return ($dnsZone -ine $null)
@@ -116,7 +116,7 @@
         {
             SetScript = {
                 Import-Module ADFS
-                
+
                 $thumbPrint = $using:CertificateThumbprint
                 $federationServiceName = $using:subject
                 $federationDisplayName = 'ADFS ' + $using:subject
@@ -149,7 +149,7 @@ configuration WAPConfiguration
 
         [Parameter(Mandatory)]
         [String]$CertificateThumbprint,
-        
+
         [Parameter(Mandatory)]
         [System.Management.Automation.PSCredential]$DomainCredentials
     )
@@ -177,14 +177,14 @@ configuration WAPConfiguration
             Name = "Telnet-Client"
         }
 
-        WindowsFeature RemoteAccessTools 
+        WindowsFeature RemoteAccessTools
         {
             Ensure = "Present"
             Name = "RSAT-RemoteAccess"
             IncludeAllSubFeature = $true
         }
 
-        WindowsFeature PowerShellADTools 
+        WindowsFeature PowerShellADTools
         {
             Ensure = "Present"
             Name = "RSAT-AD-PowerShell"
@@ -195,7 +195,7 @@ configuration WAPConfiguration
         {
             SetScript = {
                 Import-Module WebApplicationProxy
-                
+
                 $thumbPrint = $using:CertificateThumbprint
                 $federationServiceName = $using:subject
                 $secret = ConvertTo-SecureString $using:domainSecret -AsPlainText -Force

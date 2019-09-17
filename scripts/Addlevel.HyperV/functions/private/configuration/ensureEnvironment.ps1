@@ -1,13 +1,13 @@
 ﻿function ensureEnvironment {
     param (
-        [HashTable]$Environment
+        [HashTable]$Configuration
     )
 
-    if ($Environment.SSLCertificateName -notmatch ".*$($Environment.DomainName)$") {
-        throw "SSLCertificateName: $($Environment.SSLCertificateName) should end with Domain Name: $($Environment.DomainName)."
+    if ($Configuration.Certificates.SSLCertificateName -notmatch ".*$($Configuration.Environment.DomainName)$") {
+        throw "SSLCertificateName: $($Configuration.Certificates.SSLCertificateName) should end with Domain Name: $($Environment.DomainName)."
     }
 
-    if (!(Test-Path $Environment.ISOImagePath)) {
+    if (!(Test-Path $Configuration.Environment.ISOImagePath)) {
         throw "ISO Image: $($Environment.ISOImagePath) does not exist"
     }
 }

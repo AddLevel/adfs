@@ -1,5 +1,8 @@
-﻿$private = @( Get-ChildItem -Path $PSScriptRoot\functions\private\*.ps1 -Recurse -ErrorAction SilentlyContinue )
-$public  = @( Get-ChildItem -Path $PSScriptRoot\functions\public\*.ps1 -Recurse -ErrorAction SilentlyContinue )
+﻿# Module settings
+$moduleRootPath = $PSScriptRoot
+
+$private = @( Get-ChildItem -Path $moduleRootPath\functions\private\*.ps1 -Recurse -ErrorAction SilentlyContinue )
+$public  = @( Get-ChildItem -Path $moduleRootPath\functions\public\*.ps1 -Recurse -ErrorAction SilentlyContinue )
 
 foreach ($import in @($private + $public)) {
     try {
@@ -9,8 +12,5 @@ foreach ($import in @($private + $public)) {
         Write-Error -Message "Failed to import function $($import.fullname): $_"
     }
 }
-
-# Module settings
-$moduleRootPath = $PSScriptRoot
 
 Export-ModuleMember -Function $Public.Basename

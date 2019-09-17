@@ -1,8 +1,8 @@
 function ensureVirtualMachine ([hashtable]$Configuration, [string]$unattendedXmlPath, [hashtable]$VirtualMachine) {
     [string]$SwitchName = $Configuration.VirtualSwitch.SwitchName
     [string]$ReferenceImagePath = $Configuration.ReferenceImage.ReferenceImagePath
-    [string]$AdministratorPassword = $Configuration.Environment.AdministratorPassword
-    [string]$CertificatePath = $Configuration.Paths.CertificatePath
+    [string]$AdministratorPassword = convertfromEncryptedString $Configuration.Environment.AdministratorPassword
+    [string]$CertificatePath = $Configuration.Certificates.CertificatePath
     [string]$modulePath = $Configuration.Paths.ModulePath
     [string]$scriptPath = $Configuration.Paths.ScriptPath
 

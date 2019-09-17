@@ -2,7 +2,7 @@
     $makeCertPath = Join-Path $ExecutablePath 'makecert.exe'
     $pvk2pfxPath = Join-Path $ExecutablePath 'pvk2pfx.exe'
 
-    Push-Location $configuration.Paths.CertificatePath
+    Push-Location $CertificatePath
 
     if ((testCertificates -CertificateName $RootCertificateName -CertificatePath $CertificatePath) -eq $false) {
         newRootCertificate -RootCertificateName $RootCertificateName -MakeCertPath $makeCertPath -Pvk2pfxPath $pvk2pfxPath

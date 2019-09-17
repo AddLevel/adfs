@@ -6,7 +6,7 @@ function newRootCertificate ([string]$RootCertificateName, [string]$MakeCertPath
 
     $b = getCertificateDate
     $e = getCertificateDate -ExpirationDate
-    
+
     & $MakeCertPath -r -n $n -pe -sv $sv -a sha1 -len 2048 -b $b -e $e -cy authority $cer
     & $Pvk2pfxPath -pvk $sv -spc $cer -pfx $pfx
 }

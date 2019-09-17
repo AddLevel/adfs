@@ -1,20 +1,8 @@
 ﻿@{
-    Environment = @{
-        AdministratorPassword = 'Abc.123!'
-        RootCertificateName = 'AuthRoot'
-        SSLCertificateName = 'sts.auth.local'
-        DomainName = 'auth.local'
-        ISOImagePath = 'C:\vm\iso\server2019.iso'
-    }
     Paths = @{
         ModulePath = Join-Path $EnvironmentPath 'modules'
-        CertificatePath = Join-Path $EnvironmentPath 'certificates'
         VMPath = Join-Path $EnvironmentPath 'vm'
         ScriptPath = Join-path $EnvironmentPath 'scripts'
-    }
-    ReferenceImage = @{
-        ReferenceImageDiskSizeBytes= [uint64]40GB
-        ReferenceImagePath = Join-Path $EnvironmentPath ('vm\vhd\' + (getUniqueString -id $EnvironmentName -length 3) + '-referenceimage.vhdx')
     }
     VirtualSwitch = @{
         SwitchName = (getUniqueString -id $EnvironmentName -length 3) + '-internal'
